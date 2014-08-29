@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                haskpress
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            Generate presentations with impress.js and haskell
 -- description:         
 homepage:            https://github.com/rokob
@@ -16,6 +16,12 @@ build-type:          Simple
 cabal-version:       >=1.8
 
 library
-  -- exposed-modules:     
   -- other-modules:       
-  build-depends:       base ==4.6.*
+  build-depends:       base ==4.6.*,
+                       blaze-html,
+                       blaze-markup,
+                       bytestring,
+                       aeson,
+                       text
+  exposed-modules:     Text.HTML.Haskpress 
+  hs-source-dirs:      src
